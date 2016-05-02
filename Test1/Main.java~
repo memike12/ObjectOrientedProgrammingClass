@@ -1,0 +1,13 @@
+public class Main {
+    public static void fiddle(Point p){
+        p.x = 4;
+    }
+
+    public static void main (String[] args) {
+        Point p = new Point();
+        p.x = 3;
+        p.y = 7;
+        fiddle (p);
+        System.out.println(p.x + "," + p.y);
+    }
+}

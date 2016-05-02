@@ -1,0 +1,45 @@
+/**
+ *This class is to make a line between two point objects
+ */
+public class Line {
+    private Point first, second;
+
+    /**
+     * Constructor to make a line. Accepts 4 floats.
+     */
+    public Line(float firstX, float firstY, float secondX, float secondY) {
+        first = new Point(firstX, firstY);
+        second = new Point(secondX, secondY);
+    }
+
+    /**
+     *Returns the length of the line-segement between points. It accepts two points.
+     */
+    public float getLength(Point first, Point second) {
+        double lengthSquared = (first.x - second.x)(first.x - second.x) + (first.y - second.y)(first.y - second.y);
+        double length = Math.sqrt(lengthSquared);
+        return length;
+    }
+
+    /**
+     *Determines which point is the left most point. Accepts two points.
+     */
+    public Point getLeftPoint(Point first, Point second) {
+        if (first.x < second.x)
+            return first;
+        else
+            return second;
+    }
+
+    /**
+     *Determines the right most point. Accepts two points.
+     */
+    public point getRightPoint(Point first, Point second) {
+        if (first.x > second.x) {
+            return first;
+        }
+        else {
+            return second;
+        }
+    }
+}

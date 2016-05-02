@@ -1,0 +1,25 @@
+public class Rotor {
+    public String rotorString ="#ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public char first = '#';
+
+    /**
+     *Constructor
+     */
+    public Rotor(String input){
+        rotorString = input;
+        first = rotorString.charAt(0);
+    }
+    public char firstChar(){
+        return first;
+    }
+    public void rotate(){
+        char[] sentRotor=rotorString.toCharArray();
+        char[] rotatedRotor=sentRotor;
+        for (int ii=0; ii<sentRotor.length-1;ii++){
+            rotatedRotor[ii] = sentRotor[ii+1];
+        }
+        rotatedRotor[sentRotor.length-1]=sentRotor[0];
+        rotorString.equals(rotatedRotor.toString());
+        return;
+    }
+}
